@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react';
 import fetchCsvData from '@/utils/fetchCsvData';
 import styles from './SpecificGames.module.css';
@@ -28,10 +27,10 @@ const SpecificGames = ({ url }) => {
         <h3 className={styles.title}>What do I buy to play my favorite game/franchise in the best way possible?</h3>
         <ul className={styles.legend}>
           <li className={styles.legendItem}>
-            <strong className={styles.strong}>SPU:</strong> PS3's CPU
+            <strong className={styles.strong}>SPU:</strong> PS3&apos;s CPU
           </li>
           <li className={styles.legendItem}>
-            <strong className={styles.strong}>RSX:</strong> PS3's GPU
+            <strong className={styles.strong}>RSX:</strong> PS3&apos;s GPU
           </li>
         </ul>
       </div>
