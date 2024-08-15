@@ -1,0 +1,45 @@
+
+.footerContainer {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 10px 20px;
+    margin-top: 20px;
+    color: white;
+    border-bottom: 1px solid #ddd; 
+}
+
+
+.footerSlogan {
+    font-size: small;
+    
+}
+
+.websiteInfo {
+    display: flex;
+    align-items: center;
+}
+
+.footerText {
+    margin-right: 0.5rem; 
+    font-size: 0.9rem;
+    font-weight: normal;
+}
+
+.footerButton {
+    background: linear-gradient(90deg, #7B61FF 0%, #5A37F7 100%);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: background 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.footerButton:hover {
+    background: linear-gradient(90deg, var(--primary-gradient-end) 0%, var(--color-gradient-start) 100%);
+    transform: scale(1.05);
+}

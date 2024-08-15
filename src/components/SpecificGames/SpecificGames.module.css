@@ -1,0 +1,74 @@
+.container {
+  padding: 10px;
+  background: linear-gradient(135deg, var(--color-gradient-start), var(--primary-gradient-end));
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+.title {
+  font-size: 1.0rem;
+  padding-right: 60vh;
+  color: var(--color-light);
+}
+
+.legend {
+  list-style-type: none;
+  padding: 0;
+}
+
+.legendItem {
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: var(--color-accent);
+  padding-left: 100vh;
+}
+
+.strong {
+  font-weight: bold;
+}
+
+.card {
+  background: linear-gradient(135deg, rgba(108, 91, 154, 0.8), rgba(142, 155, 157, 0.8));
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  color: var(--color-light);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.gameTitle {
+  color: var(--color-light);
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.p, .bottleneck, .recommendedCpu {
+  margin: 6px 0;
+  color: var(--color-light);
+  font-size: 1.0rem;
+}
+
+.p strong, .bottleneck strong, .recommendedCpu strong {
+  color: var(--color-dark);
+  font-size: 1.0rem;
+}
+
+
+.highlightedCpu {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--color-light);
+  background: linear-gradient(135deg, var(--secondary-gradient-start), var(--secondary-gradient-end));
+  padding: 10px;
+  border-radius: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%; 
+  box-sizing: border-box; 
+}

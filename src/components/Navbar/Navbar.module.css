@@ -1,0 +1,120 @@
+
+.navbarContainer {
+  background-color: var(--color-background);
+  padding: 1rem;
+  border-bottom: 1px solid #4B70F5;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbarLogo {
+  color: var(--color-light);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 1rem;
+}
+
+.navbarLogo h1 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.navLinksList {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  gap: 2rem;
+}
+
+.navLinkItem {
+  margin: 0;
+}
+
+
+.navLink {
+  color: var(--color-light);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.navLink:hover {
+  color: var(--color-accent);
+  text-shadow: 0 0 5px var(--color-accent);
+}
+
+
+.externalLinkSection {
+  padding-left: 20vh;
+}
+
+
+.externalLinkButton {
+  background: linear-gradient(90deg, #7B61FF 0%, #5A37F7 100%);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: background 0.3s ease, transform 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.externalLinkButton:hover {
+  background: linear-gradient(90deg, #5A37F7 0%, #7B61FF 100%);
+  transform: scale(1.05);
+}
+
+
+@media (max-width: 768px) {
+  .navbarContainer {
+    flex-direction: column;
+    padding: 0.5rem;
+  }
+
+  .navbarLogo {
+    position: static;
+    margin-bottom: 1rem;
+  }
+
+  .navLinksList {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .externalLinkSection {
+    position: static;
+    margin-top: 1rem;
+  }
+
+  .externalLinkButton {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbarLogo h1 {
+    font-size: 1rem;
+  }
+
+  .navLink {
+    font-size: 0.9rem;
+  }
+
+  .externalLinkButton {
+    font-size: 0.7rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
