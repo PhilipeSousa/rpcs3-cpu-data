@@ -1,19 +1,82 @@
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
-  }
-  
-  .section {
-    padding: 2rem 0;
-    border-bottom: 1px solid #4B70F5;
-    text-align: center; 
-  }
-  
-  .h2 {
-    padding-top: 20px;
-    font-size: 1.5rem; 
-    margin-bottom: 1rem;
-    color: var(--pink-light);
-  }
-  
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.section {
+  padding: 2rem 0;
+  padding-top: 60px;
+  border-bottom: 1px solid #4B70F5;
+  text-align: center; 
+}
+
+.h2 {
+  padding-top: 20px;
+  font-size: 1.5rem; 
+  margin-bottom: 1rem;
+  color: var(--pink-light);
+}
+
+.badge {
+  position: relative;
+  display: inline-block;
+  color: white; 
+  padding: 5px 10px;
+  border-radius: 10px; 
+  text-decoration: none; 
+  font-weight: bold; 
+  font-size: 0.8rem; 
+  margin-bottom: 8px; 
+  margin-right: 10px;
+}
+
+.avx512Badge {
+  background: var(--color-accent); 
+}
+
+.similarPerformanceBadge {
+  background: var(--color-secondary);
+}
+
+.badgeText {
+  display: flex;
+  align-items: center;
+}
+
+.badgeText svg {
+  margin-right: 5px;
+}
+
+.tooltip {
+  visibility: hidden; 
+  width: 200px; 
+  background-color: var(--color-dark); 
+  color: var(--color-light); 
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; 
+  left: 50%;
+  margin-left: -100px; 
+  opacity: 0; 
+  transition: opacity 0.3s; 
+}
+
+.tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%; 
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #333 transparent transparent transparent;
+}
+
+.badge:hover .tooltip {
+  visibility: visible;
+  opacity: 1; 
+}

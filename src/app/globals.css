@@ -7,7 +7,7 @@
   /* Similar Performance */
   --color-secondary: #7c8a5f;
 
-  --shadow-box:  rgba(0, 0, 0, 0.15);
+  --shadow-box: rgba(0, 0, 0, 0.15);
   --color-background: #402E7A;
   --color-gradient-start: rgba(58, 45, 111, 0.7);
   --primary-gradient-end: rgba(79, 58, 143, 0.7);
@@ -16,23 +16,20 @@
   --secondary-gradient-start: rgba(79, 58, 143, 1.0);
   --color-gradient-end: rgba(108, 91, 154, 0.7);
   --primary-gradient-start: rgba(58, 45, 111, 0.7);
- 
 }
 
-body, html {
-  height: 100%;
+* {
   margin: 0;
   padding: 0;
-  background: var(--color-background);
+  box-sizing: border-box;
+  
+}
+body {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--color-background);
 }
-
-.content {
-  /* Navbar height */
-  padding-top: 4rem; 
-}
-
 
 main {
   flex: 1;

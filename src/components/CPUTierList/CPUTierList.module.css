@@ -1,123 +1,130 @@
-
 .gridContainer {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 8px;
-    padding: 8px;
-    max-width: 1000px;
-    margin: 0 auto;
-    background: linear-gradient(135deg, var(--color-gradient-start), var(--primary-gradient-end));
-    border-radius: 3px;
-    align-items: flex-start;
-  }
-  
-  
-  .stickyHeader {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 3.5rem;
-    /* Adjust for navbar height */
-    background: linear-gradient(135deg, var(--secondary-gradient-start), var(--secondary-gradient-end));
-    z-index: 20; 
-    padding: 8px; 
-    border-radius: 3px;
-    box-shadow: 0 1px 3px var(--shadow-box);
-  }
-  
-  
-  .tierSection {
-    margin-bottom: 12px; 
-    background: linear-gradient(135deg, rgba(79, 58, 143, 0.8), rgba(108, 91, 154, 0.8));
-    border-radius: 3px;
-    box-shadow: 0 3px 6px var(--shadow-box);
-    padding: 8px; 
-    text-align: center;
-    position: relative; 
-  }
-  
-  .tierContentWrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-  }
-  
-  
-  .tierTitle {
-    margin: 0 0 8px; 
-    padding-bottom: 4px; 
-    border-bottom: 3px solid rgba(255, 255, 255, 0.3);
-    display: flex;
-    justify-content: center; 
-    gap: 8px; 
-  }
-  
-  .tierName {
-    font-size: 2.2rem; 
-    color: var(--color-light); 
-  }
-  
- 
-  .tierLabel {
-    font-size: 0.9rem; 
-    color: #ffffff; 
-    align-self: flex-end; 
-    padding-bottom: 3px;
-  }
-  
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 8px;
+  padding: 8px;
+  max-width: 1000px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, var(--color-gradient-start), var(--primary-gradient-end));
+  border-radius: 3px;
+  align-items: flex-start;
+}
 
-  .tierDescriptionText {
-    font-size: 0.8rem; 
-    margin: 8px 0; 
-    padding: 0 4px; 
-    color: #fff; 
-    text-align: center; 
-  }
-  
+.stickyHeader {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 3.5rem;
+  background: linear-gradient(135deg, var(--secondary-gradient-start), var(--secondary-gradient-end));
+  z-index: 20;
+  padding: 8px;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px var(--shadow-box);
+}
 
-  .cpuList {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    flex-grow: 1; 
-    width: 100%; 
-    margin-top: 10px; 
-  }
-  
+.tierSection {
+  margin-bottom: 12px;
+  background: linear-gradient(135deg, rgba(79, 58, 143, 0.8), rgba(108, 91, 154, 0.8));
+  border-radius: 3px;
+  box-shadow: 0 3px 6px var(--shadow-box);
+  padding: 8px;
+  text-align: center;
+  position: relative;
+}
 
-  .cpuListItem {
-    background: linear-gradient(135deg, rgba(108, 91, 154, 0.8), rgba(142, 155, 157, 0.8));
-    color: var(--color-light);
-    font-size: 0.8rem;
-    padding: 4px; 
-    border-radius: 3px; 
-    margin-bottom: 4px;
-    display: flex;
-    transition: background-color 0.3s, transform 0.3s;
-    box-shadow: 0 2px 4px var(--shadow-box);
-    justify-content: space-between; 
-    align-items: center; 
-  }
-  
-  .cpuListItem:hover {
-    background: linear-gradient(135deg, rgba(142, 155, 157, 0.8), var(--pink-light));
-    color: var(--color-dark);
-    transform: scale(1.13); 
-  }
-  
-  .avx512Badge {
-    background: var(--color-accent);
-  }
-  
-  .similarPerformanceBadge {
-    background: var(--color-secondary);
-  }
-  
+.tierContentWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tierTitle {
+  margin: 0 0 8px;
+  padding-bottom: 4px;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.tierName {
+  font-size: 2.2rem;
+  color: var(--color-light);
+}
+
+.tierLabel {
+  font-size: 0.9rem;
+  color: #ffffff;
+  align-self: flex-end;
+  padding-bottom: 3px;
+}
+
+.tierDescriptionText {
+  font-size: 0.8rem;
+  margin: 8px 0;
+  padding: 0 4px;
+  color: #fff;
+  text-align: center;
+}
+
+.cpuList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.cpuListItem {
+  background: linear-gradient(135deg, rgba(108, 91, 154, 0.8), rgba(142, 155, 157, 0.8));
+  color: var(--color-light);
+  font-size: 0.8rem;
+  padding: 4px;
+  border-radius: 3px;
+  margin-bottom: 4px;
+  display: flex;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0 2px 4px var(--shadow-box);
+  justify-content: space-between;
+  align-items: center;
+  position: relative; 
+}
+
+.cpuListItem:hover {
+  background: linear-gradient(135deg, rgba(142, 155, 157, 0.8), var(--pink-light));
+  color: var(--color-dark);
+  transform: scale(1.13);
+}
+
+.badgeWrapper {
+  display: flex;
+  gap: 4px;
+}
+
+.badge {
+  font-size: 0.8em;
+  padding: 0.2em 0.4em;
+  border-radius: 0.2em;
+  background: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.avx512Badge {
+  background: var(--color-accent);
+}
+
+.similarPerformanceBadge {
+  background: var(--color-secondary);
+}
+
+@media (max-width: 600px) {
   .badge {
-    font-size: 0.7rem;
-    padding: 2px 3px; 
-    border-radius: 3px; 
-    background: rgba(0, 0, 0, 0.2);
-    color: #fff;
-    margin-left: 4px; 
+    font-size: 0.7em;
+    padding: 0.2em 0.3em;
+    border-radius: 0.2em;
+    margin-left: 0.2em;
   }
-  
+}

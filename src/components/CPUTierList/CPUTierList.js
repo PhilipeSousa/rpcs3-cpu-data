@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
@@ -6,6 +5,7 @@ import fetchCsvData from '@/utils/fetchCsvData';
 import styles from './CPUTierList.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCrown, faMedal } from '@fortawesome/free-solid-svg-icons';
+import { faMicrochip, faRocket } from '@fortawesome/free-solid-svg-icons'; 
 
 const getPositionIcon = (index, cpu) => {
   const excludeIconCpus = [
@@ -15,7 +15,8 @@ const getPositionIcon = (index, cpu) => {
     "Ryzen 1000 - 2000 6c/12t or worse",
     "Intel's 2nd and 3rd Gen",
     "AMD FX CPUs",
-    "Anything Older"
+    "Anything Older",
+    "No mobile CPUs have reached this tier"
   ];
 
   if (excludeIconCpus.includes(cpu)) {
@@ -121,8 +122,18 @@ const CpuTierList = ({ url }) => {
                   className={`${styles.cpuListItem} ${avx512Cpus.includes(cpu) ? styles.avx512Badge : ''} ${similarPerformanceCpus.includes(cpu) ? styles.similarPerformanceBadge : ''}`}
                 >
                   {getPositionIcon(index, cpu)} {cpu}
-                  {avx512Cpus.includes(cpu) && <span className={styles.badge}>AVX512</span>}
-                  {similarPerformanceCpus.includes(cpu) && <span className={styles.badge}>Similar Performance</span>}
+                  <div className={styles.badgeWrapper}>
+                    {avx512Cpus.includes(cpu) && (
+                      <span className={`${styles.badge} ${styles.avx512Badge}`}>
+                        <FontAwesomeIcon icon={faMicrochip} /> AVX512
+                      </span>
+                    )}
+                    {similarPerformanceCpus.includes(cpu) && (
+                      <span className={`${styles.badge} ${styles.similarPerformanceBadge}`}>
+                        <FontAwesomeIcon icon={faRocket} /> Similar
+                      </span>
+                    )}
+                  </div>
                 </li>
               ))}
             </ul>
