@@ -9,6 +9,8 @@
 
 **RPCS3 CPU DATA** is a project designed to visualize CPU performance metrics for the RPCS3 emulator. The project offers a responsive interface that integrates live data from CSV URLs, allowing users to analyze how different CPUs affect emulator performance and make informed decisions for optimal results.
 
+<img align="center" src="./public/homepage_readme.png">
+
 ## Technologies Used
 
 - **Next.js 14**: A React framework for server-side rendering and modern web application development.
