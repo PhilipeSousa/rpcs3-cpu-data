@@ -41,9 +41,13 @@ const SpecificGames = ({ url }) => {
               <h2 className={styles.gameTitle}>{game['Game/Franchise']}</h2>
               <p className={styles.bottleneck}><strong>Bottleneck:</strong> {game['What is the Bottleneck?']}</p>
               <p className={styles.recommendedCpu}><strong>Recommended CPUs:</strong></p>
-              <p className={styles.highlightedCpu}>
-                {game['Which CPU do I recommend?']}
-              </p>
+              <ul className={styles.highlightedCpu}>
+                {game['Which CPU do I recommend?']
+                  .split(' > ')
+                  .map((cpu, i) => (
+                    <li key={i}>{cpu.trim()}</li>
+                  ))}
+              </ul>
             </div>
           </div>
         ))}
